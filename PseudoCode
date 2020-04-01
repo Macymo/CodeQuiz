@@ -1,0 +1,42 @@
+* 
+locate start button document.querySelector - DONE
+
+Add event listener for start quiz button to be clicked - DONE
+
+locate timer 
+
+add function for when start button is clicked the timer will start
+
+once timer starts first question returns
+
+when question answer === false  then the  timer--
+
+When a question is correct then the next question is shown
+
+Var question: = {}
+"What is a sequence of instructions that performs a specific task, packaged as a unit?" : "Function"
+    "Variable"
+    "Loop"
+    "If Statement"
+
+"Each element in an array has a numbered position known as it's..." : "index"
+    "parameter"
+    "list"
+    "iterator variable"
+
+"The values that are passed to the function when it is called are" : "arguements"
+    "returns"
+    "arrays"
+    "swtich statements"
+
+"Which loop is best to use when you need to perform a task for every item in a list, or when the order of things must be maintained?" : "For each loop"
+    "While loop"
+    "For loop"
+    "Loop loop"
+
+
+Text Area for Initials and Score to be submitted and scores saved in local storage?.
+
+
+This needs to go into JS somewhere?
+var count = localStorage.getItem("count");
