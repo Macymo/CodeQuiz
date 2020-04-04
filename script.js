@@ -88,17 +88,42 @@ function getQuestion() {
    };
 
 // Event Listeners for when a choice is clicked the next question will appear
-   choice1.addEventListener ("click", function () {
-      nextQuestion();
+   choice1.addEventListener ("click", function (event) {
+      var answer = myQuestions[i].answer
+      if (answer === event.target.textContent) {
+         nextQuestion();
+      } else {
+         showFeedback();
+         nextQuestion();
+      };
+    //  console.log(event.target.textContent);
     });
-    choice2.addEventListener ("click", function () {
-      nextQuestion();
+    choice2.addEventListener ("click", function (event) {
+      var answer = myQuestions[i].answer
+      if (answer === event.target.textContent) {
+         nextQuestion();
+      } else {
+         showFeedback();
+         nextQuestion();
+      };
     });
-    choice3.addEventListener ("click", function () {
-      nextQuestion();
+    choice3.addEventListener ("click", function (event) {
+      var answer = myQuestions[i].answer
+      if (answer === event.target.textContent) {
+         nextQuestion();
+      } else {
+         showFeedback();
+         nextQuestion();
+      };
     });
-    choice4.addEventListener ("click", function () {
-      nextQuestion();
+    choice4.addEventListener ("click", function (event) {
+      var answer = myQuestions[i].answer
+      if (answer === event.target.textContent) {
+         nextQuestion();
+      } else {
+         showFeedback();
+         nextQuestion();
+      };
     });
 
 // Function to show next question
@@ -109,29 +134,17 @@ function nextQuestion() {
 
 // Trying to loop through my nested array choices and my answer to pull the match for the CORRECT ANSWER CLICKED.
 // UNSURE HOW I AM SUPPOSE TO ADD A CLICK EVENT INTO THIS 
-   var correct = myQuestions.answer 
-   for (var i = 0; i < correct.length; i++){
-      for (var j = 0; j <  choose.length; j++){
-         if (myQuestions[i]===choose[j]){
-       correctAnswer();
-       nextQuestion();
-         };
-      };
-   };
+   // var correct = myQuestions.answer 
+   // for (var i = 0; i < correct.length; i++){
+   //    for (var j = 0; j <  choose.length; j++){
+   //       if (myQuestions[i]===choose[j]){
+   //     correctAnswer();
+   //     nextQuestion();
+   //       };
+   //    };
+   // };
 
-// THIS IS FOR A CORRECT ANSWER CLICKED BUT WHAT ABOUT WRONG ANSWER CLICKED
-// AFTER A CHOICE IS MADE ON THE 4TH QUESTION I NEED THE HIGHSCORES PAGE TO OPEN
 
-//  function correctAnswer() {
-//     if ( ???){
-//        nextQuestion();
-//     } else if ( ???) {
-//        showFeedback();
-//     } else {
-//       return window.open("index.html", "_self");
-//     };
-//   };
-   
 // When wrong answer is clicked 
 function showFeedback() {
    feedBack.textContent = feed;
@@ -140,3 +153,136 @@ function showFeedback() {
    };
 };
 
+
+//
+//    var firstChoice = myQuestions[questionIndex];
+//    choice1.textContent = firstChoice.choices[0];
+  
+//    var secondChoice = myQuestions[questionIndex];
+//    choice2.textContent = secondChoice.choices[1];
+
+//    var thirdChoice = myQuestions[questionIndex];
+//    choice3.textContent = thirdChoice.choices[2];
+
+//    var fourthChoice = myQuestions[questionIndex];
+//    choice4.textContent = fourthChoice.choices[3];
+
+//    choice1.addEventListener ("click", function () {
+//       showFeedback();
+//       nextQuestion();
+//     });
+//     choice2.addEventListener ("click", function () {
+//       nextQuestion();
+//     });
+//     choice3.addEventListener ("click", function () {
+//       showFeedback();
+//       nextQuestion();
+//     });
+//     choice4.addEventListener = ("click", function () {
+//       showFeedback();
+//       nextQuestion();
+//     });
+// };
+
+
+// function nextQuestion() {
+//    var currentQuestion = myQuestions[1];
+//    pulledQuestion.textContent = currentQuestion.question;
+
+//    var firstChoice = myQuestions[1];
+//    choice1.textContent = firstChoice.choices[0];
+  
+//    var secondChoice = myQuestions[1];
+//    choice2.textContent = secondChoice.choices[1];
+
+//    var thirdChoice = myQuestions[1];
+//    choice3.textContent = thirdChoice.choices[2];
+
+//    var fourthChoice = myQuestions[1];
+//    choice4.textContent = fourthChoice.choices[3];
+
+//    choice1.addEventListener ("click", function () {
+//       showFeedback();
+//       thirdQuestion();
+//     });
+//     choice2.addEventListener ("click", function () {
+//       showFeedback();
+//       thirdQuestion();
+//     });
+//     choice3.addEventListener ("click", function () {
+//       showFeedback();
+//       thirdQuestion();
+//     });
+//     choice4.addEventListener = ("click", function () {
+      // var one = correctAnswer
+//       thirdQuestion();
+//     });
+// };
+
+// function thirdQuestion() {
+//    var currentQuestion = myQuestions[2];
+//    pulledQuestion.textContent = currentQuestion.question;
+
+//    var firstChoice = myQuestions[2];
+//    choice1.textContent = firstChoice.choices[0];
+  
+//    var secondChoice = myQuestions[2];
+//    choice2.textContent = secondChoice.choices[1];
+
+//    var thirdChoice = myQuestions[2];
+//    choice3.textContent = thirdChoice.choices[2];
+
+//    var fourthChoice = myQuestions[2];
+//    choice4.textContent = fourthChoice.choices[3];
+
+//    choice1.addEventListener ("click", function () {
+//       showFeedback();
+//       fourthQuestion();
+//     });
+//     choice2.addEventListener ("click", function () {
+//      var one = correctAnswer
+   //   fourthQuestion();
+//     });
+//     choice3.addEventListener ("click", function () {
+//       showFeedback();
+//       fourthQuestion();
+//     });
+//     choice4.addEventListener = ("click", function () {
+//       showFeedback();
+//       fourthQuestion();
+//     });
+// };
+
+// function fourthQuestion() {
+//    var currentQuestion = myQuestions[3];
+//    pulledQuestion.textContent = currentQuestion.question;
+
+//    var firstChoice = myQuestions[3];
+//    choice1.textContent = firstChoice.choices[0];
+  
+//    var secondChoice = myQuestions[3];
+//    choice2.textContent = secondChoice.choices[1];
+
+//    var thirdChoice = myQuestions[3];
+//    choice3.textContent = thirdChoice.choices[2];
+
+//    var fourthChoice = myQuestions[3];
+//    choice4.textContent = fourthChoice.choices[3];
+
+//    choice1.addEventListener ("click", function () {
+    //   var one = correctAnswer
+//       window.open("index2.html", "_self");
+//     });
+//     choice2.addEventListener ("click", function () {
+//       showFeedback();
+//       window.open("index2.html", "_self");
+//     });
+//     choice3.addEventListener ("click", function () {
+//       showFeedback();
+//       window.open("index2.html", "_self");
+//     });
+//     choice4.addEventListener = ("click", function () {
+//       showFeedback();
+//       window.open("index2.html", "_self");
+//     });
+//    };
